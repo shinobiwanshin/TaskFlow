@@ -38,6 +38,12 @@ This project includes a `Dockerfile` for containerized deployment.
     docker build -t taskflow-app .
     ```
 
+    _Note for Mac users (M1/M2/M3): If deploying to a cloud provider like Render, you must build for the correct platform:_
+
+    ```bash
+    docker build --platform linux/amd64 -t taskflow-app .
+    ```
+
 2.  **Run the Container:**
     You need to provide the `DATABASE_URL` environment variable. If you are running the Postgres container locally (from `docker-compose.yml`), you can link them or use the host network, but for simplicity, here is how to run it standalone if you have a database URL:
 

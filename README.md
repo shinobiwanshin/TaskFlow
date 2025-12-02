@@ -39,7 +39,58 @@ TaskFlow is a full-stack application designed to manage employees and track thei
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd ProU_front
    ```
+
+2. **Install Dependencies**
+   ```bash
+   npm run install:all
+   ```
+
+## 🏃‍♂️ Running Locally
+
+### Option 1: Using Docker (Recommended for Database)
+
+1. **Start the PostgreSQL Database**
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   This starts a local Postgres instance on port `5434`.
+
+2. **Start the Application**
+   ```bash
+   npm run dev
+   ```
+   - Frontend: `http://localhost:5173`
+   - Backend: `http://localhost:3000`
+
+### Option 2: Manual Setup
+
+1. Ensure you have PostgreSQL installed and running.
+2. Create a `.env` file in the `backend` folder (see `backend/.env.example`).
+3. Update `DATABASE_URL` in `.env` to point to your local Postgres instance.
+4. Start the app:
+   ```bash
+   npm run dev
+   ```
+
+## 🐳 Docker Support
+
+You can containerize the entire application:
+
+```bash
+# Build the image
+docker build -t taskflow-app .
+
+# Run the container
+docker run -p 3000:3000 -e DATABASE_URL="postgres://user:pass@host.docker.internal:5434/prou_db" -e NODE_ENV=development taskflow-app
+```
+
+## ☁️ Deployment
+
+See [DEPLOY.md](./DEPLOY.md) for detailed deployment instructions to platforms like Render, Railway, or Heroku.
