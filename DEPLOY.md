@@ -28,6 +28,29 @@ This project is configured to be deployed as a single Node.js application (Monor
     - `PORT`: The port the server should listen on (usually provided by the host).
     - `DATABASE_URL`: The connection string for your PostgreSQL database (e.g., `postgres://user:pass@host:5432/dbname`).
 
+## Docker Deployment
+
+This project includes a `Dockerfile` for containerized deployment.
+
+1.  **Build the Docker Image:**
+
+    ```bash
+    docker build -t taskflow-app .
+    ```
+
+2.  **Run the Container:**
+    You need to provide the `DATABASE_URL` environment variable. If you are running the Postgres container locally (from `docker-compose.yml`), you can link them or use the host network, but for simplicity, here is how to run it standalone if you have a database URL:
+
+    ```bash
+    docker run -p 3000:3000 -e DATABASE_URL="postgres://user:password@host.docker.internal:5434/prou_db" taskflow-app
+    ```
+
+    _(Note: `host.docker.internal` allows the container to access the host's localhost on Windows/Mac. On Linux, use `--network="host"` or the IP address)._
+
+3.  **Deploy to Cloud (e.g., Render, Railway, Fly.io):**
+    - Most platforms will automatically detect the `Dockerfile` and build it.
+    - Just ensure you set the `DATABASE_URL` environment variable in the platform's dashboard.
+
 ## Example: Deploying to Render.com
 
 1.  Create a new **PostgreSQL** database on Render. Copy the "Internal Database URL" (if deploying the web service on Render too) or "External Database URL".
