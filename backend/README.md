@@ -6,7 +6,7 @@ This is the backend API for the Task Management application. It provides RESTful
 
 - **Node.js**: Runtime environment
 - **Express**: Web framework
-- **SQLite**: Database (stored in `database.sqlite`)
+- **PostgreSQL**: Database
 - **Sequelize**: ORM for database interaction
 
 ## Setup and Run
@@ -56,5 +56,5 @@ This is the backend API for the Task Management application. It provides RESTful
 
 ## Assumptions
 
-- The database is SQLite for simplicity and ease of setup.
+- The database is PostgreSQL.
 - The initial data is seeded from the frontend's `sampleNestedEmployees.json` if the database is empty.

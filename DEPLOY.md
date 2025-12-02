@@ -5,7 +5,7 @@ This project is configured to be deployed as a single Node.js application (Monor
 ## Prerequisites
 
 - A hosting provider that supports Node.js (e.g., Render, Railway, Heroku, DigitalOcean App Platform).
-- **Note:** Since this project uses **SQLite** (a file-based database), you need a hosting provider that supports **persistent disk storage** (like Render's Disk, Railway's Volume, or a VPS). If you deploy to a serverless platform (like Vercel or Netlify), your database will be reset every time the server restarts.
+- **PostgreSQL Database:** You will need a connection string (URL) for a PostgreSQL database. Many providers (like Render, Railway, Neon, Supabase) offer managed Postgres databases.
 
 ## Deployment Steps (General)
 
@@ -24,29 +24,32 @@ This project is configured to be deployed as a single Node.js application (Monor
     ```
 
 3.  **Environment Variables:**
+    Set the following environment variables in your hosting provider's dashboard:
     - `PORT`: The port the server should listen on (usually provided by the host).
+    - `DATABASE_URL`: The connection string for your PostgreSQL database (e.g., `postgres://user:pass@host:5432/dbname`).
 
 ## Example: Deploying to Render.com
 
-1.  Create a new **Web Service** on Render.
-2.  Connect your GitHub repository.
-3.  **Build Command:** `npm run build`
-4.  **Start Command:** `npm start`
-5.  **Disk (Important):**
-    - Add a **Disk** to your service.
-    - Mount path: `/opt/render/project/src/backend` (or wherever your app lives, usually the root or backend folder).
-    - This ensures `database.sqlite` is preserved across restarts.
+1.  Create a new **PostgreSQL** database on Render. Copy the "Internal Database URL" (if deploying the web service on Render too) or "External Database URL".
+2.  Create a new **Web Service** on Render.
+3.  Connect your GitHub repository.
+4.  **Build Command:** `npm run build`
+5.  **Start Command:** `npm start`
+6.  **Environment Variables:**
+    - Add `DATABASE_URL` and paste the connection string from step 1.
+    - Add `NODE_ENV` = `production`.
 
 ## Local Production Test
 
 To test the production build locally:
 
-1.  Build the project:
+1.  Ensure you have a local Postgres database running and `DATABASE_URL` set in `backend/.env`.
+2.  Build the project:
     ```bash
     npm run build
     ```
-2.  Start the server:
+3.  Start the server:
     ```bash
     npm start
     ```
-3.  Open `http://localhost:3000`.
+4.  Open `http://localhost:3000`.
