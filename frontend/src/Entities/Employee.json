@@ -1,0 +1,28 @@
+{
+  "name": "Employee",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the employee"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "department": {
+      "type": "string",
+      "enum": ["Engineering", "Design", "Marketing", "Sales", "HR", "Finance"],
+      "description": "Department the employee belongs to"
+    },
+    "position": {
+      "type": "string",
+      "description": "Job title/position"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "URL to employee avatar image"
+    }
+  },
+  "required": ["name", "email", "department", "position"]
+}

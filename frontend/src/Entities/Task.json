@@ -1,0 +1,36 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Task title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the task"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "completed"],
+      "default": "pending",
+      "description": "Current status of the task"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "default": "medium",
+      "description": "Task priority level"
+    },
+    "assigned_to": {
+      "type": "string",
+      "description": "Employee ID the task is assigned to"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Task due date"
+    }
+  },
+  "required": ["title", "status", "assigned_to"]
+}

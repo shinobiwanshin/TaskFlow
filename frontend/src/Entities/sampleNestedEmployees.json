@@ -1,0 +1,213 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "role": "Frontend Developer",
+      "department": "Engineering",
+      "email": "alice@company.com",
+      "tasks": [
+        {
+          "id": 101,
+          "title": "Build login page",
+          "status": "Completed",
+          "priority": "high",
+          "due_date": "2025-12-01"
+        },
+        {
+          "id": 102,
+          "title": "Implement dashboard",
+          "status": "In Progress",
+          "priority": "high",
+          "due_date": "2025-12-05"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "role": "Backend Developer",
+      "department": "Engineering",
+      "email": "bob@company.com",
+      "tasks": [
+        {
+          "id": 103,
+          "title": "API integration",
+          "status": "Pending",
+          "priority": "medium",
+          "due_date": "2025-12-10"
+        },
+        {
+          "id": 114,
+          "title": "Implement auth middleware",
+          "status": "In Progress",
+          "priority": "high",
+          "due_date": "2025-12-08"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Carol Williams",
+      "role": "UI/UX Designer",
+      "department": "Design",
+      "email": "carol@company.com",
+      "tasks": [
+        {
+          "id": 104,
+          "title": "Design new icons",
+          "status": "Completed",
+          "priority": "low",
+          "due_date": "2025-11-28"
+        },
+        {
+          "id": 115,
+          "title": "Create marketing assets",
+          "status": "Pending",
+          "priority": "medium",
+          "due_date": "2025-12-12"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "David Brown",
+      "role": "Project Manager",
+      "department": "Product",
+      "email": "david@company.com",
+      "tasks": [
+        {
+          "id": 105,
+          "title": "Sprint planning",
+          "status": "Completed",
+          "priority": "medium",
+          "due_date": "2025-11-25"
+        },
+        {
+          "id": 116,
+          "title": "Coordinate client demo",
+          "status": "In Progress",
+          "priority": "high",
+          "due_date": "2025-12-02"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Emma Davis",
+      "role": "HR Specialist",
+      "department": "HR",
+      "email": "emma@company.com",
+      "tasks": [
+        {
+          "id": 106,
+          "title": "Onboarding checklist",
+          "status": "Pending",
+          "priority": "medium",
+          "due_date": "2025-12-09"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Frank Miller",
+      "role": "DevOps Engineer",
+      "department": "Infrastructure",
+      "email": "frank@company.com",
+      "tasks": [
+        {
+          "id": 109,
+          "title": "Setup CI/CD",
+          "status": "In Progress",
+          "priority": "high",
+          "due_date": "2025-12-08"
+        },
+        {
+          "id": 117,
+          "title": "Upgrade server images",
+          "status": "Pending",
+          "priority": "medium",
+          "due_date": "2025-12-18"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Grace Lee",
+      "role": "Data Analyst",
+      "department": "Analytics",
+      "email": "grace@company.com",
+      "tasks": [
+        {
+          "id": 110,
+          "title": "Analytics dashboard",
+          "status": "Pending",
+          "priority": "medium",
+          "due_date": "2025-12-20"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Henry Wilson",
+      "role": "QA Engineer",
+      "department": "Quality Assurance",
+      "email": "henry@company.com",
+      "tasks": [
+        {
+          "id": 111,
+          "title": "Write test cases",
+          "status": "Completed",
+          "priority": "medium",
+          "due_date": "2025-11-30"
+        },
+        {
+          "id": 118,
+          "title": "End-to-end tests",
+          "status": "Pending",
+          "priority": "high",
+          "due_date": "2025-12-22"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Ivy Kim",
+      "role": "Sales Manager",
+      "department": "Sales",
+      "email": "ivy@company.com",
+      "tasks": [
+        {
+          "id": 119,
+          "title": "Draft sales playbook",
+          "status": "In Progress",
+          "priority": "medium",
+          "due_date": "2025-12-14"
+        },
+        {
+          "id": 120,
+          "title": "Reach out to key prospects",
+          "status": "Pending",
+          "priority": "high",
+          "due_date": "2025-12-03"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Jack Lopez",
+      "role": "Finance Analyst",
+      "department": "Finance",
+      "email": "jack@company.com",
+      "tasks": [
+        {
+          "id": 121,
+          "title": "Budget report Q4",
+          "status": "Pending",
+          "priority": "high",
+          "due_date": "2025-12-15"
+        }
+      ]
+    }
+  ]
+}
